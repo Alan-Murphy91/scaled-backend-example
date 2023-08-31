@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Alan-Murphy91/scaled-backend-example/issues"
   },
-  "homepage": "https://github.com/Alan-Murphy91/scaled-backend-example#readme"
+  "homepage": "https://github.com/Alan-Murphy91/scaled-backend-example#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
