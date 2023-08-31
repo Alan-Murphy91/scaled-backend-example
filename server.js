@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 
 // Provide server information via API
 app.get('/api/server-info', (req, res) => {
-    cpuIntensiveTask(100);  // 5 seconds of CPU intensive task
     pidusage(process.pid, function (err, stats) {
       const serverInfo = {
         Type: 'Express Server 1',
@@ -40,7 +39,7 @@ app2.get('/', (req, res) => {
 
 // Provide server information via API
 app2.get('/api/server-info', (req, res) => {
-    cpuIntensiveTask(100);  // 5 seconds of CPU intensive task
+    // cpuIntensiveTask(100);  // 5 seconds of CPU intensive task
     pidusage(process.pid, function (err, stats) {
       const serverInfo = {
         Type: 'Express Server 2',
@@ -57,13 +56,3 @@ app2.get('/api/server-info', (req, res) => {
 app2.listen(port2, () => {
   console.log(`Server running at http://localhost:${port2}/`);
 });
-
-
-
-// Function to perform CPU intensive task for durationMs milliseconds
-function cpuIntensiveTask(durationMs) {
-  const end = Date.now() + durationMs;
-  while (Date.now() < end) {
-    Math.sqrt(Math.random());
-  }
-}

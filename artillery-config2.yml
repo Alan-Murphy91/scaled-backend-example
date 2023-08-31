@@ -1,5 +1,5 @@
 config:
-  target: 'http://localhost:3000'
+  target: 'http://localhost:4000'  # Replace with the address of your second server
   phases:
     - duration: 31536000
       arrivalRate: 300
